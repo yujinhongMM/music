@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yu音乐</title>
+    <link rel="stylesheet" href="css/music.css">
+    <!--阿里巴巴矢量图标库-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1171911_9hv8npdt608.css">
+</head>
+<body>
+    <div id="music">
+        <!--播放模块-->
+        <div id="player">
+            <!--音乐图片-->
+            <div class="music-img">
+                <img src="img/2.gif" id="music-img"/>
+            </div>
+            <!--歌名-歌手-专辑-->
+            <div class="tag">
+                <strong>歌曲名</strong>
+                <span class="artist">歌手</span>
+                <span class="album">专辑</span>
+            </div>
+            <!--屏幕小于510px显示-->
+            <div class="long_tag">
+                歌名-歌手-专辑
+            </div>
+            <!--控制器-->
+            <div class="control">   
+                <div class="control_above">
+                    <!--播放组件-->
+                    <div class="player-component">
+                        <!--上一首--> 
+                        <i class="icon iconfont icon-zshangyishou" id="prev"></i>
+                        <!--暂停-->
+                        <i class="icon iconfont icon-play" id="suspend"></i>
+                        <!--下一首-->
+                        <i class="icon iconfont icon-zxiayishou" id="next"></i>  
+                    </div>
+                    <!--声音-->
+                    <div class="voice">
+                        <!--声音图标-->
+                        <i class="icon iconfont icon-shengyin" id="isVoice"></i>
+                        <!--音量调节-->
+                        <div class="slider" id="voiceSlider">
+                            <div class="loaded" id="voiceLoaded"></div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="control_below">
+                    <!--歌曲进度条-->
+                    <div class="slider" id="musicSlider">
+                        <div class="loaded" id="musicLoaded"></div>
+                    </div>
+                    <!--时间-->
+                    <span id="time">00:01</span>
+                    <!--播放模式-->
+                    <i class="icon iconfont icon-shunxubofang"></i>
+                </div>
+
+            </div>
+            
+        </div>
+        <!--屏幕小于510px显示-->
+        <div id="menu">音乐列表</div>
+        <!--用于判断音乐列表是否选择-->
+        <input type="checkbox" id="drop">
+        <!--歌曲列表-->
+        <ul id="playlist">
+            
+        </ul>
+        
+        <!--HTML <audio> 元素-->
+        <audio id="audio"></audio>
+    </div>
+        
+</body>
+<script type="text/javascript" src="js/music.js"></script>
+</html>
