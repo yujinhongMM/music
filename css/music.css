@@ -117,7 +117,6 @@ body{
     cursor: pointer;
 }
 .control_below>.slider>.loaded{
-    width: 50%;
     background: rgb(213, 233, 216);
     height: 5px;
     border-radius: 5px;
@@ -130,7 +129,7 @@ body{
     font-size: 10px;
     line-height: 20px;
 }
-.icon-shunxubofang{
+.icon-shunxubofang,.icon-danquxunhuan,.icon-suijibofang{
     font-size: 20px !important;
 }
 
