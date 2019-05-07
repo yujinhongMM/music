@@ -1,23 +1,38 @@
+function screenWH(){
+    let offsetWid = document.documentElement.clientWidth;
+    let offsetHei = document.documentElement.clientHeight;
+    if (/(Android)/i.test(navigator.userAgent)){     // 判断是否为Android手机
+        offsetWid = screen.width;
+        offsetHei = screen.height;
+    }else if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){  // 判断是否为苹果手机
+        offsetWid=document.documentElement.clientWidth;
+        offsetHei=document.documentElement.clientHeight;
+    }
+    document.getElementsByTagName("body")[0].style.width=offsetWid+"px";
+    document.getElementsByTagName("body")[0].style.height=offsetHei+"px";
+};
+
 (function(){
+    screenWH();
 
-        // 简单定义封装$
+    // 简单定义封装$
     let $=function(str){
-        // 根据空格分割成数组
-        let ary=str.split(' ');
-        let dom=document;
+    // 根据空格分割成数组
+    let ary=str.split(' ');
+    let dom=document;
 
-        // 查询class，tag的为时候数组
-        function queryChildren(dom,num){
-            let dom_ary=[];
-            if(ary[num].indexOf('.')>=0){
-                for(let i=0;i<dom.length;i++){
-                    dom_ary.push(dom[i].getElementsByClassName(ary[num].slice(1)));
-                }
-            }else{
-                for(let i=0;i<dom.length;i++){
-                    dom_ary.push(dom[i].getElementsByTagName(ary[num]));
-                }
+    // 查询class，tag的为时候数组
+    function queryChildren(dom,num){
+        let dom_ary=[];
+        if(ary[num].indexOf('.')>=0){
+            for(let i=0;i<dom.length;i++){
+                dom_ary.push(dom[i].getElementsByClassName(ary[num].slice(1)));
             }
+        }else{
+            for(let i=0;i<dom.length;i++){
+                dom_ary.push(dom[i].getElementsByTagName(ary[num]));
+            }
+        }
         if(num+1!=ary.length){
                 let new_ary=[];
                 for(let i=0;i<dom_ary.length;i++){
@@ -430,3 +445,7 @@
     music.eventBind();
        
 })();
+
+window.onresize=function(){
+    screenWH();
+}

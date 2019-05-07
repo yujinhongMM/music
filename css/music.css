@@ -60,8 +60,6 @@ body{
 .control{
     margin-top: 10px;
     height: 25px;
-}
-.control{
     margin-left: 155px;
 }
 .control i{
@@ -163,34 +161,181 @@ body{
 }
 
 /* 超小型设备（电话，510像素及以下） */
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 600px) {
     body {
         width: 100%;
+        background: url(../img/xingkong.jpg) no-repeat;
+        background-size: cover;
+        padding:0;
+        margin:0;
     }
     #music{
         width: 100%;
+        min-width:0px;
         margin:0;
         border-radius:0;
         border:0;
+        padding:0;
+        background:none;
+    }
+    #playlist{
+        display: none;    
+    }
+    .music-img{
+        top:100px;
+        width: 340px;
+        left:50%;
+        margin:0 -170px; 
+        height: 340px;
+    }
+    .tag{
+        margin: 0px;
+        margin-top:452px; 
+        text-align: center;
+    }
+    .tag{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .tag>span{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .control{
+        margin: 0px;
+        margin-top:40px;
+    }
+    .player-component, .voice{
+        height: 40px;
+    }
+    .voice>.slider{
+        margin-top: 15px;
+        height: 10px;
+    }
+    .voice>.slider>.loaded{
+        height: 10px;
+    }
+    .control_below{
+        margin-top: 30px;
+        height: 80px;
+    }
+    .control_below>.slider{
+        height: 15px;
+    }
+    .control_below>.slider>.loaded{
+        height: 15px;
+    }
+    #time{
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .icon-zshangyishou,.icon-play,.icon-zxiayishou,
+    .icon-zanting,.icon-shengyin,.icon-jingyin{
+        font-size: 35px !important;
+    }
+    .icon-shunxubofang,.icon-danquxunhuan,.icon-suijibofang{
+        font-size: 45px !important;
     }
 }
 
-/* 小型设备（纵向平板电脑和大型手机，600像素及以上） */
-@media only screen and (min-width: 600px) {
-    
+@media only screen and (max-width: 510px) {
+    body {
+        width: 100%;
+        background: url(../img/xingkong.jpg) no-repeat;
+        background-size: cover;
+        padding:0;
+        margin:0;
+    }
+    #music{
+        width: 100%;
+        min-width:0px;
+        margin:0;
+        border-radius:0;
+        border:0;
+        padding:0;
+        background:none;
+    }
+    #playlist{
+        display: none;    
+    }
+    .music-img{
+        top:70px;
+        width: 260px;
+        left:50%;
+        margin:0 -130px; 
+        height: 260px;
+    }
+    .tag{
+        margin: 0px;
+        margin-top:329px; 
+        text-align: center;
+    }
+    .tag{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .tag>span{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .control{
+        margin: 0px;
+        margin-top:20px;
+    }
+    .player-component, .voice{
+        height: 30px;
+    }
+    .voice>.slider{
+        height: 8px;
+    }
+    .voice>.slider>.loaded{
+        height: 8px;
+    }
+    .control_below{
+        margin-top: 0px;
+        height: 58px;
+    }
+    .control_below>.slider{
+        height: 10px;
+    }
+    .control_below>.slider>.loaded{
+        height: 10px;
+    }
+    #time{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .icon-zshangyishou,.icon-play,.icon-zxiayishou,
+    .icon-zanting,.icon-shengyin,.icon-jingyin{
+        font-size: 25px !important;
+    }
+    .icon-shunxubofang,.icon-danquxunhuan,.icon-suijibofang{
+        font-size: 30px !important;
+    }    
+    #menu{
+        position: fixed;
+        display: block;
+        height: 30px;
+        padding: 5px;
+        line-height: 30px;
+        text-align: center;
+        width: 70px;
+        z-index: 99;
+        border: 1px solid #1A7E3B;
+        border-radius: 5px;
+        background: rgba(66, 59, 59, 0.781);
+        top:10px;
+        right: 10px;
+        color: white;
+    }
+    #drop:checked ~ #playlist {
+        display: block;
+    }
+    #playlist{
+        position: fixed;
+        top:60px;
+        left: 4.5%;
+        background: black;
+    }
 }
 
-/* 中型设备（横向平板电脑，768px及以上） */
-@media only screen and (min-width: 768px) {
-    
-} 
-
-/* 大型设备（笔记本电脑/台式机，992px及以上） */
-@media only screen and (min-width: 992px) {
-    
-} 
-
-/* 超大设备（大型笔记本电脑和台式机，1200像素及以上） */
-@media only screen and (min-width: 1200px) {
-    
-}
