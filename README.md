@@ -24,7 +24,7 @@
 #### 利用checkbox实现下拉框
 利用 `label`标签的  `"for"`绑定到 `checkbox`复选框，从而实现。
 ```html
-		<!--屏幕小于510px显示-->
+	<!--屏幕小于510px显示-->
         <label id="menu" for="drop">音乐列表</label>
         <!--用于判断音乐列表是否选择-->
         <input type="checkbox" id="drop">
@@ -33,7 +33,7 @@
         </ul>
 ```
 ```css
-		#playlist{
+	    #playlist{
 	        display: none;    
 	    }
 		#drop:checked ~ #playlist {
